@@ -1,0 +1,36 @@
+EMAIL KHIẾU NẠI CỦA KHÁCH
+
+Tối 08/11/2026 gia đình tôi 5 người ăn buffet hải sản. Nhà hàng quảng cáo có tôm hùm và cua nhưng cả buổi tối hai món này đều hết, chúng tôi chờ 2 lần bổ sung đều không có. Nhân viên phục vụ rất nhiệt tình, tôi không có gì phàn nàn về nhân viên. Tôi đề nghị nhà hàng giải quyết thỏa đáng.
+
+======================================================
+CHÍNH SÁCH ĐỀN BÙ CỦA BẾP VIỆT BUFFET
+======================================================
+
+- thieu_mon: món đã quảng cáo nhưng không phục vụ: hoàn 100.000 đồng/khách cho mỗi món bị thiếu.
+- cho_lau: chờ món quá 30 phút: tặng voucher 50.000 đồng/khách.
+- nhan_vien: khiếu nại về thái độ nhân viên: tặng voucher 100.000 đồng/khách.
+- khac: chuyển bộ phận Chăm sóc khách hàng xem xét, chưa đề xuất mức đền bù.
+- Tổng mức đền bù trên 800.000 đồng phải được Quản lý nhà hàng duyệt trước khi gửi khách.
+
+======================================================
+ĐỊNH DẠNG ĐẦU RA CỦA TRẠM 1 (sinh viên viết prompt)
+======================================================
+
+Trạm 1 – đọc email, trả về chỉ một đối tượng JSON gồm đúng 4 trường:
+{"loai_su_co": một trong "thieu_mon" | "cho_lau" | "nhan_vien" | "khac", "so_khach": số nguyên, "so_mon_bi_thieu": số nguyên hoặc null, "tom_tat": "không quá 20 từ"}
+
+======================================================
+PROMPT TRẠM 2 (đã có sẵn, không cần viết)
+======================================================
+
+Dưới đây là kết quả phân loại khiếu nại (JSON của Trạm 1) và chính sách đền bù. Chỉ dùng chính sách trong thẻ <chinh_sach> để tính tổng mức đền bù. Trả về đúng một đối tượng JSON, không giải thích:
+{"loai_su_co": ..., "muc_den_bu": tổng số tiền (đồng) hoặc null, "can_duyet": true nếu muc_den_bu trên 800.000, ngược lại false}
+<ket_qua_tram_1>(JSON của Trạm 1)</ket_qua_tram_1>
+<chinh_sach>(chính sách đền bù ở trên)</chinh_sach>
+
+======================================================
+PROMPT TRẠM 3 (đã có sẵn, không cần viết)
+======================================================
+
+Bạn là nhân viên chăm sóc khách hàng của Bếp Việt Buffet. Dựa trên JSON trong thẻ <ket_qua_tram_2>, viết email phản hồi khách: xin lỗi, nêu đúng mức đền bù trong JSON, không tự đặt mức khác, giọng điệu chân thành, chuyên nghiệp, dưới 150 từ.
+<ket_qua_tram_2>(JSON của Trạm 2)</ket_qua_tram_2>

@@ -1,0 +1,13 @@
+BẢNG GIÁ BUFFET (đồng/người lớn)
+LAU – Buffet lẩu: 299.000
+NUONG – Buffet nướng: 399.000
+HAISAN – Buffet hải sản: 599.000
+
+QUY TẮC TÍNH GIÁ
+1. Trẻ em cao từ 1 m đến 1,4 m tính 50% giá người lớn. Trẻ dưới 1 m miễn phí.
+2. Đoàn từ 10 người lớn trở lên được giảm 5% trên tiền buffet (tiền người lớn + tiền trẻ em).
+3. Phụ thu phòng riêng: 500.000 đồng/phòng. Phụ thu không được giảm giá.
+4. Tổng tiền = tiền buffet sau giảm + phụ thu.
+
+YÊU CẦU BÁO GIÁ
+Đoàn công ty ăn buffet nướng (NUONG) gồm 10 người lớn, 3 trẻ em (cao 1,1 m, 1,2 m và 1,35 m) và 1 bé cao 0,8 m. Đoàn thuê 1 phòng riêng.

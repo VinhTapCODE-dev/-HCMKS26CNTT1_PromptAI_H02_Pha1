@@ -1,0 +1,35 @@
+BẢNG MÃ BUFFET
+LAU – Buffet lẩu
+NUONG – Buffet nướng
+HAISAN – Buffet hải sản
+
+QUY TẮC CHUẨN HOÁ (5 quy tắc)
+1. ma_buffet lấy theo bảng mã loại buffet.
+2. ngay_dat dạng YYYY-MM-DD; tin nhắn không ghi năm thì lấy năm 2026; không có ngày cụ thể thì null.
+3. Khách không nhắc trẻ em thì tre_em là 0 và mọi khách là người lớn.
+4. khu_vuc chỉ nhận "trong_nha", "san_vuon" hoặc null.
+5. ghi_chu chỉ ghi yêu cầu đặc biệt về ăn uống, dị ứng, đi lại; không có thì null.
+
+======================================================
+HAI TIN NHẮN MẪU ĐÃ XỬ LÝ ĐÚNG (dùng làm ví dụ)
+======================================================
+
+Tin nhắn mẫu 1:
+Đặt giúp em buffet hải sản tối 14/11/2026, 2 người lớn 2 bé, ngồi sân vườn. 1 bé dị ứng tôm.
+Kết quả đúng:
+{"ma_buffet": "HAISAN", "ngay_dat": "2026-11-14", "nguoi_lon": 2, "tre_em": 2, "khu_vuc": "san_vuon", "ghi_chu": "1 bé dị ứng tôm"}
+
+Tin nhắn mẫu 2:
+Buffet lẩu còn bàn trong nhà không shop, mình đi 1 người, hôm nào cũng được.
+Kết quả đúng:
+{"ma_buffet": "LAU", "ngay_dat": null, "nguoi_lon": 1, "tre_em": 0, "khu_vuc": "trong_nha", "ghi_chu": null}
+
+======================================================
+BA TIN NHẮN CẦN XỬ LÝ
+======================================================
+
+TN1: Cho mình đặt buffet nướng ngày 19/12 nha, 2 người lớn với 1 bé 9 tuổi, ngồi trong nhà.
+
+TN2: Đặt bàn buffet hải sản cho 3 người ngày 03/01/2027 ạ. Một người dị ứng sữa.
+
+TN3: Buffet lẩu tối Giáng sinh còn bàn không ạ? Nhà em 4 người lớn, ông ngoại đi xe lăn, ngồi sân vườn.
